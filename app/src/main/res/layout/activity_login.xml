@@ -5,27 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
     android:orientation="vertical">
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/phoenix_ico_with_text"/>
+        android:layout_marginTop="50dp"
+        android:src="@drawable/phoenix_ico_with_text" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Learn From Home"
-        android:paddingLeft="20dp"
-        android:textColor="@color/Light_Blue"
-        android:gravity="center"
-        android:textSize="25sp"
-        android:layout_marginTop="20dp"/>
-
+        android:text="@string/login_fragment_hint_text"
+        style="@style/hint_text"
+        />
     <FrameLayout
-        android:layout_margin="10dp"
         android:id="@+id/container_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        style="@style/frame_layout_theme"
+        android:layout_marginTop="80dp"/>
 </LinearLayout>
