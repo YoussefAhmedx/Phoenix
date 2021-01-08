@@ -2,6 +2,10 @@
     <string name="app_name">Phoenix</string>
 
     <!-- Login & Sign Up Application String -->
+
+    <!--Error Text -->
+    <string name="wrong_password">Wrong Password</string>
+
     <!-- Hints Text -->
     <string name="login_fragment_hint_text">Learn From Home</string>
 
@@ -11,6 +15,17 @@
     <string name="google_button">Google Account</string>
     <string name="facebook_button">Facebook Account</string>
     <string name="assistant_button">Login As Assistant</string>
+    <string name="back_button">Back</string>
+
+    <!-- Edit Text Hint -->
+    <string name="email_hint">E-Mail</string>
+    <string name="password_hint">Password</string>
+
+
+    <!-- Under Line TextView -->
+    <string name="forget_password"><u>Forget Password?</u>.</string>
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->
