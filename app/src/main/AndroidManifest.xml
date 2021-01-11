@@ -9,18 +9,17 @@
         android:roundIcon="@mipmap/phoenix_ico"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phoenix">
-
+        <activity android:name=".WelcomeActivity"></activity>
         <!-- Welcome Splash Screen -->
-        <activity android:name=".WelcomeSplashScreen" android:theme="@style/WelcomeSplashScreen">
+        <activity
+            android:name=".WelcomeSplashScreen"
+            android:theme="@style/WelcomeSplashScreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- -->
-
-
-        <activity android:name=".LoginActivity"></activity>
+        </activity> <!--  -->
     </application>
 
 </manifest>
