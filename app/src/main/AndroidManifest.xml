@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/phoenix_ico"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phoenix">
-        <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".WelcomeActivity"
+            android:screenOrientation="locked"></activity>
         <!-- Welcome Splash Screen -->
         <activity
             android:name=".WelcomeSplashScreen"
-            android:theme="@style/WelcomeSplashScreen">
+            android:theme="@style/WelcomeSplashScreen"
+            android:screenOrientation="locked">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

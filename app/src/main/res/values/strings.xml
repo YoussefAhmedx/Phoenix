@@ -7,7 +7,10 @@
     <string name="wrong_password">Wrong Password</string>
 
     <!-- Hints Text -->
-    <string name="login_fragment_hint_text">Learn From Home</string>
+    <string name="welcome_text">Welcome To Phoenix</string>
+    <!-- Lateral Text -->
+    <string name="sign_up_lateral_text">Let\'s create an account</string>
+    <string name="login_lateral_text">Already have an account</string>
 
     <!-- Button -->
     <string name="login_button">Login</string>
@@ -24,6 +27,9 @@
 
     <!-- Under Line TextView -->
     <string name="forget_password"><u>Forget Password?</u>.</string>
+
+    <!-- Image Content Description -->
+    <string name="img_description">Image View</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
