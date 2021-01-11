@@ -32,7 +32,18 @@ public class SignUpActivity extends AppCompatActivity {
             }
         };
         this.getOnBackPressedDispatcher().addCallback(this, callback);
-        //SignUpFirstFragment Open
-        ShowFragment(new SignUpFirstFragment() , "SignUpFirstFragment");
+        //SignUpFragment Open
+        ShowFragment(new SignUpFragment() , "SignUpFirstFragment");
+        //TODO: SignUpSelectTypeFragment Open
+
+        //TODO: SignUpTeacherInfoFragment Open
+
+        //TODO: SignUpAddAssistantFragment Open
+
+        //TODO: SignUpShowAssistantFragment Open
+
+        //TODO: SignUpStudentFragment Open
+
+        //TODO SignUpVerificationFragment Open
     }
 }

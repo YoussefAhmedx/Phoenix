@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity"
+    tools:context=".SignUpFragment"
     android:orientation="vertical"
     android:weightSum="3">
     <LinearLayout
@@ -16,13 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.9"
-            android:src="@drawable/student_meet_up"
+            android:src="@drawable/sign_up_image_2"
             android:contentDescription="@string/img_description"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_text"
+            android:text="@string/sign_up_text"
             style="@style/hint_text"
             />
     </LinearLayout>
@@ -37,31 +37,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/lateral_text"
-            android:text="@string/sign_up_lateral_text" />
-        <Button
-            android:id="@+id/sign_up_btn"
+            android:text="@string/enter_your_e_mail_lateral_text" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/button_theme"
-            android:background="@drawable/custom_button_cyan"
+            android:orientation="horizontal"
             android:layout_marginTop="25dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/sign_up_text"/>
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+            <EditText
+                android:id="@+id/e_mail_edit_text"
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                style="@style/edit_text_theme"
+                android:background="@drawable/custom_edit_text"
+                android:inputType="text"
+                android:hint="@string/email_hint"
+                android:layout_marginEnd="10dp"
+                android:autofillHints="@string/email_hint"/>
+            <Button
+                android:id="@+id/sign_up_with_e_mail_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"
+                android:background="@drawable/next_button"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/lateral_text"
             android:text="@string/login_lateral_text"
             android:layout_marginTop="25dp"/>
-        <Button
-            android:id="@+id/login_btn"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/button_theme"
             android:layout_marginTop="25dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/login_button"/>
+            android:orientation="horizontal"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/google_img"
+                android:contentDescription="@string/img_description"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/facebook_img"
+                android:contentDescription="@string/img_description"/>
+        </LinearLayout>
     </LinearLayout>
+
+
 </LinearLayout>
