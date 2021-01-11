@@ -27,7 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                if(tag == "SignUpFirstFragment")
+                if(tag.equals("SignUpFirstFragment"))
                     finish();
             }
         };
