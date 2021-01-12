@@ -1,16 +1,38 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-<!--    <style name="Theme.Phoenix" parent="Theme.MaterialComponents.DayNight.DarkActionBar">-->
-<!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
-<!--        <item name="colorPrimary">@color/purple_200</item>-->
-<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
-<!--        <item name="colorOnPrimary">@color/black</item>-->
-<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
-<!--        <item name="colorSecondary">@color/teal_200</item>-->
-<!--        <item name="colorSecondaryVariant">@color/teal_200</item>-->
-<!--        <item name="colorOnSecondary">@color/black</item>-->
-<!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
-<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-<!--    </style>-->
+     Base application theme.
+    <style name="Theme.Phoenix" parent="Theme.AppCompat.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryVariant">@color/Dark_Blue</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:background">@color/Dark_Blue</item>
+    </style>
+
+    <!-- Splash Screen Theme -->
+    <style name="WelcomeSplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/welcome_splash_screen_night</item>
+    </style>
+
+    <!-- Widget Theme -->
+
+    <!-- Hint Text Theme -->
+    <style name="hint_text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <!-- Lateral Text -->
+    <style name="lateral_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+    <!-- Button Theme -->
+    <style name="button_theme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/custom_button_light_blue</item>
+        <item name="android:textSize">30sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpFragment"
+    android:orientation="horizontal"
+    android:weightSum="2">
+    <LinearLayout
+        android:id="@+id/sign_up_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_text"
+            style="@style/hint_text"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/lateral_text"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/enter_your_e_mail_lateral_text" />
+
+            <Button
+                android:id="@+id/sign_up_with_e_mail_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/button_theme"
+                android:background="@drawable/custom_button_light_blue"
+                android:layout_marginEnd="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="25dp"
+                android:textSize="20sp"
+                android:text="@string/sign_up_with_e_mail"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/lateral_text"
+                android:text="@string/login_lateral_text"
+                android:layout_marginTop="25dp"
+                android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="80dp"
+            android:paddingRight="80dp">
+            <ImageView
+                android:id="@+id/sign_up_with_google_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/google_img"
+                android:contentDescription="@string/img_description"/>
+            <ImageView
+                android:id="@+id/sign_up_with_facebook_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/facebook_img"
+                android:contentDescription="@string/img_description"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/description_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sign_up_img"
+            android:contentDescription="@string/img_description"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

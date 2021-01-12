@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Light_Blue">#180484</color>
-    <color name="Dark_Blue">#0C004A</color>
-    <color name="Cyan">#1A86C6</color>
+    <!-- Light Color -->
+    <color name="Light_Blue">#2000CB</color>
+    <color name="Cyan">#00A0FF</color>
+    <!-- Dark Color -->
+    <color name="Dark_Blue">#00002E</color>
+    <!-- Other -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#D6D6D6</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_gray">#929292</color>
 </resources>
