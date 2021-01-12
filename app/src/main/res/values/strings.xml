@@ -21,6 +21,7 @@
     <string name="facebook_button">Facebook Account</string>
     <string name="assistant_button">Login As Assistant</string>
     <string name="back_button">Back</string>
+    <string name="sign_up_with_e_mail">Sign Up With Email</string>
 
     <!-- Edit Text Hint -->
     <string name="email_hint">E-Mail</string>

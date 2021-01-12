@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/lateral_text"
+            android:gravity="center"
             android:text="@string/sign_up_lateral_text" />
         <Button
             android:id="@+id/sign_up_btn"
@@ -53,6 +54,7 @@
             android:layout_height="wrap_content"
             style="@style/lateral_text"
             android:text="@string/login_lateral_text"
+            android:gravity="center"
             android:layout_marginTop="25dp"/>
         <Button
             android:id="@+id/login_btn"

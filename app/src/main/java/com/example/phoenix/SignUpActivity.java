@@ -34,8 +34,6 @@ public class SignUpActivity extends AppCompatActivity {
         this.getOnBackPressedDispatcher().addCallback(this, callback);
         //SignUpFragment Open
         ShowFragment(new SignUpFragment() , "SignUpFirstFragment");
-        //TODO: SignUpSelectTypeFragment Open
-
         //TODO: SignUpTeacherInfoFragment Open
 
         //TODO: SignUpAddAssistantFragment Open

@@ -28,7 +28,6 @@
     <style name="lateral_text">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/dark_gray</item>
-        <item name="android:layout_marginStart">10dp</item>
     </style>
     <!-- Button Theme -->
     <style name="button_theme">
