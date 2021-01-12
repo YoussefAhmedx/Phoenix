@@ -9,18 +9,18 @@
     <!-- Hints Text -->
     <string name="welcome_text">Welcome To Phoenix</string>
     <string name="sign_up_text">Sign Up</string>
+    <string name="you_are_text">You are ....</string>
     <!-- Lateral Text -->
     <string name="sign_up_lateral_text">Let\'s create an account</string>
     <string name="login_lateral_text">Already have an account</string>
     <string name="enter_your_e_mail_lateral_text">Enter your E-Mail</string>
     <string name="other_sign_up_lateral_text">Sign up in another way </string>
+    <string name="select_your_type_lateral_text">Please Select your Type</string>
 
     <!-- Button -->
     <string name="login_button">Login</string>
-    <string name="google_button">Google Account</string>
-    <string name="facebook_button">Facebook Account</string>
-    <string name="assistant_button">Login As Assistant</string>
-    <string name="back_button">Back</string>
+    <string name="teacher_type_button">Teacher</string>
+    <string name="student_type_button">Student</string>
     <string name="sign_up_with_e_mail">Sign Up With Email</string>
 
     <!-- Edit Text Hint -->

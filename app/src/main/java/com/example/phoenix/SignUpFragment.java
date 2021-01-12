@@ -3,6 +3,8 @@ package com.example.phoenix;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +33,13 @@ public class SignUpFragment extends Fragment {
         sign_up_with_e_mail_btn = rootView.findViewById(R.id.sign_up_with_e_mail_btn);
         sign_up_with_e_mail_btn.setOnClickListener(v -> {
          //TODO: SignUpSelectTypeFragment Open
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container_fragment, new SignUpSelectTypeFragment() , "SignUpSelectTypeFragment")
+                    .addToBackStack(null)
+                    .commit();
+            SignUpActivity.tag = "SignUpSelectTypeFragment";
+
+
 
         });
 
