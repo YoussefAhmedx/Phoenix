@@ -2,11 +2,11 @@
      Base application theme.
     <style name="Theme.Phoenix" parent="Theme.AppCompat.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimaryVariant">@color/Dark_Blue</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:background">@color/Dark_Blue</item>
+        <item name="android:background">@color/black</item>
     </style>
 
     <!-- Splash Screen Theme -->
