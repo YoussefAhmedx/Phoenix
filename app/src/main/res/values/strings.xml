@@ -3,12 +3,24 @@
 
     <!-- Login & Sign Up Application String -->
 
+    <!-- No Internet Connection -->
+    <string name="no_internet">Please Check Your Internet Connection</string>
+    <!-- Text in Welcome Layout-->
+    <string name="welcome_layout">Welcome To Phoenix</string>
+    <string name="description_welcome_layout">For Easier teaching and more enjoyable study</string>
+    <!-- Easy Learning Layout -->
+    <string name="easy_learning">Enjoy Learning</string>
+    <string name="description_easy_learning_layout">Learn from anywhere with your teachers</string>
+    <!-- Easy Teaching Layout -->
+    <string name="easy_teaching">Communicate with students</string>
+    <string name="description_easy_teaching_layout">Communicate with students from anywhere, at any time</string>
+
     <!--Error Text -->
     <string name="wrong_password">Wrong Password</string>
 
     <!-- Hints Text -->
-    <string name="welcome_text">Welcome To Phoenix</string>
     <string name="sign_up_text">Sign Up</string>
+    <string name="login_text">Login</string>
     <string name="you_are_text">You are ....</string>
     <!-- Lateral Text -->
     <string name="sign_up_lateral_text">Let\'s create an account</string>
@@ -18,7 +30,6 @@
     <string name="select_your_type_lateral_text">Please Select your Type</string>
 
     <!-- Button -->
-    <string name="login_button">Login</string>
     <string name="teacher_type_button">Teacher</string>
     <string name="student_type_button">Student</string>
     <string name="sign_up_with_e_mail">Sign Up With Email</string>

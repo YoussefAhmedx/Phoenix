@@ -1,12 +1,10 @@
 package com.example.phoenix;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -22,6 +20,8 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        //Turn Night Mode Off
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         //SignUpFragment Open
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_fragment, new SignUpFragment() , "SignUpFragment").commit();
