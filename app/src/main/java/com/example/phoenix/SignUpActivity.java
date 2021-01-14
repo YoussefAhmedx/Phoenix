@@ -20,8 +20,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        //Turn Night Mode Off
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         //SignUpFragment Open
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_fragment, new SignUpFragment() , "SignUpFragment").commit();
