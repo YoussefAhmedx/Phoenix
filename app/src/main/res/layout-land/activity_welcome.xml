@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WelcomeLayouts.WelcomeActivity">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:background="@color/Light_Blue">
+        <Button
+            android:id="@+id/login_btn"
+            style="@style/welcome_btn"
+            android:text="@string/login_text"
+       />
+        <Button
+            android:id="@+id/sign_up_btn"
+           style="@style/welcome_btn"
+            android:text="@string/sign_up_text" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

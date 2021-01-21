@@ -15,6 +15,11 @@
     <string name="easy_teaching">Communicate with students</string>
     <string name="description_easy_teaching_layout">Communicate with students from anywhere, at any time</string>
 
+    <!-- Sign Up Fragment Main Text -->
+    <string name="sign_up_fragment"><b>Create New Account</b></string>
+    <!-- Login Fragment Main Text-->
+    <string name="login_fragment"><b>Welcome Back</b></string>
+
     <!--Error Text -->
     <string name="wrong_password">Wrong Password</string>
 
@@ -22,25 +27,39 @@
     <string name="sign_up_text">Sign Up</string>
     <string name="login_text">Login</string>
     <string name="you_are_text">You are ....</string>
+    <string name="Licence">By using our services you are agreeing to our <b>terms</b>  and <b>Privacy Statement</b> </string>
     <!-- Lateral Text -->
     <string name="sign_up_lateral_text">Let\'s create an account</string>
     <string name="login_lateral_text">Already have an account</string>
     <string name="enter_your_e_mail_lateral_text">Enter your E-Mail</string>
     <string name="other_sign_up_lateral_text">Sign up in another way </string>
     <string name="select_your_type_lateral_text">Please Select your Type</string>
+    <string name="other_login_lateral_text">Login in another way</string>
 
     <!-- Button -->
     <string name="teacher_type_button">Teacher</string>
     <string name="student_type_button">Student</string>
     <string name="sign_up_with_e_mail">Sign Up With Email</string>
+    <string name="sign_up_with_google">Sign up with google</string>
+    <string name="sign_up_with_facebook">Sign up with Facebook</string>
+    <string name="login_with_email">Login with email</string>
+    <string name="login_with_google">Login with google</string>
+    <string name="login_with_facebook">Login with Facebook</string>
 
     <!-- Edit Text Hint -->
+    <string name="name_hint">Name</string>
     <string name="email_hint">E-Mail</string>
     <string name="password_hint">Password</string>
+    <string name="phone_hint">Phone</string>
+    <string name="whats_app_number_hint">What\'s App Number</string>
+    <string name="date_hint">Date</string>
+    <string name="select_type_hint">Select Type</string>
 
 
     <!-- Under Line TextView -->
     <string name="forget_password"><u>Forget Password?</u>.</string>
+    <string name="already_have_account">Already have account ? <b>Login</b></string>
+    <string name="do_not_have_account">Don\'t Have Account? <b>Sign Up</b></string>
 
     <!-- Image Content Description -->
     <string name="img_description">Image View</string>
