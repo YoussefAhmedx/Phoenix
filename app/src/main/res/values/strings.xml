@@ -15,6 +15,9 @@
     <string name="easy_teaching">Communicate with students</string>
     <string name="description_easy_teaching_layout">Communicate with students from anywhere, at any time</string>
 
+    <!-- Sign Up Fragment Main Text -->
+    <string name="sign_up_fragment">Create New Account</string>
+
     <!--Error Text -->
     <string name="wrong_password">Wrong Password</string>
 
@@ -22,6 +25,7 @@
     <string name="sign_up_text">Sign Up</string>
     <string name="login_text">Login</string>
     <string name="you_are_text">You are ....</string>
+    <string name="Licence">By using our services you are agreeing to our <b>terms</b>  and <b>Privacy Statement</b> </string>
     <!-- Lateral Text -->
     <string name="sign_up_lateral_text">Let\'s create an account</string>
     <string name="login_lateral_text">Already have an account</string>
@@ -33,6 +37,8 @@
     <string name="teacher_type_button">Teacher</string>
     <string name="student_type_button">Student</string>
     <string name="sign_up_with_e_mail">Sign Up With Email</string>
+    <string name="sign_up_with_google">Sign up with google</string>
+    <string name="sign_up_with_facebook">Sign up with facebook</string>
 
     <!-- Edit Text Hint -->
     <string name="email_hint">E-Mail</string>
@@ -41,6 +47,7 @@
 
     <!-- Under Line TextView -->
     <string name="forget_password"><u>Forget Password?</u>.</string>
+    <string name="already_have_account">Already have account ? <b>Login</b></string>
 
     <!-- Image Content Description -->
     <string name="img_description">Image View</string>

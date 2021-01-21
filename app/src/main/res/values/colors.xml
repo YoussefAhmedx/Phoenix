@@ -12,6 +12,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#D6D6D6</color>
     <color name="red">#FF0000</color>
-    <color name="dark_gray">#929292</color>
+    <color name="dark_gray">#D4D4D4</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="white_opacity">#32FFFFFF</color>
 </resources>

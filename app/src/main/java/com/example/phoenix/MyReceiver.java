@@ -4,13 +4,14 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.phoenix.WelcomeLayouts.WelcomeActivity;
 
 
 public class MyReceiver extends BroadcastReceiver {

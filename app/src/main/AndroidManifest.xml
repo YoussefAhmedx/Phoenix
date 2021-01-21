@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.phoenix">
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,27 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Phoenix">
         <activity
-            android:name=".WelcomeActivity"
-            android:screenOrientation="locked" />
-        <activity
-            android:name=".SignUpActivity"
-            android:screenOrientation="locked" /> <!-- Welcome Splash Screen -->
-        <activity
-            android:name=".WelcomeSplashScreen"
-            android:screenOrientation="locked"
-            android:theme="@style/WelcomeSplashScreen">
-            <intent-filter>
-                <action android:name = "android.net.conn.CONNECTIVITY_CHANGE"
-                    tools:ignore="BatteryLife" />
-                <action android:name = "android.net.wifi.WIFI_STATE_CHANGED" />
-            </intent-filter>
+            android:name=".WelcomeLayouts.WelcomeSplashScreen"
+            android:screenOrientation="locked">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+        <activity
+            android:name=".WelcomeLayouts.WelcomeActivity"/>
+        <activity
+            android:name=".SignUpLayout.SignUpActivity"
+            android:screenOrientation="locked" /> <!-- Welcome Splash Screen -->
+
     </application>
 
 </manifest>

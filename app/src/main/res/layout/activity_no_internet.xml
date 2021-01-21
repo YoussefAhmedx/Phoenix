@@ -14,10 +14,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:src="@drawable/no_internet"
         android:layout_margin="20dp"
+        android:contentDescription="@string/img_description"
         />
 
     <TextView
-        style="@style/hint_text"
+        style="@style/welcome_description_text"
         android:id="@+id/no_internet_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,93 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpFragment"
-    android:orientation="vertical"
-    android:weightSum="3">
-    <LinearLayout
-        android:id="@+id/description_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="1.5">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.9"
-            android:src="@drawable/sign_up_img"
-            android:contentDescription="@string/img_description"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sign_up_text"
-            style="@style/hint_text"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/sign_up_layout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/lateral_text"
-            android:gravity="center"
-            android:text="@string/enter_your_e_mail_lateral_text" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-            <Button
-                android:id="@+id/sign_up_with_e_mail_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/button_theme"
-                android:background="@drawable/custom_button_light_blue"
-                android:layout_marginEnd="40dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="25dp"
-                android:textSize="20sp"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sign_up_with_e_mail_btn"
+        style="@style/card_view_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                style="@style/card_view_image"
+                android:src="@drawable/email"
+                android:contentDescription="@string/img_description"
+                />
+            <TextView
+                style="@style/card_view_text"
                 android:text="@string/sign_up_with_e_mail"
                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/lateral_text"
-                android:text="@string/login_lateral_text"
-                android:layout_marginTop="25dp"
-                android:gravity="center"/>
+    </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal"
-            android:paddingLeft="80dp"
-            android:paddingRight="80dp">
+    <TextView
+        android:id="@+id/lateral_text"
+        android:text="@string/other_sign_up_lateral_text"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_e_mail_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/lateral_text"
+        android:layout_marginTop="50dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sign_up_with_google_btn"
+        style="@style/card_view_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lateral_text">
             <ImageView
-                android:id="@+id/sign_up_with_google_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
+                style="@style/card_view_image"
                 android:src="@drawable/google_img"
-                android:contentDescription="@string/img_description"/>
+                android:contentDescription="@string/img_description"
+                />
+            <TextView
+                style="@style/card_view_text"
+                android:text="@string/sign_up_with_google"
+                />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/sign_up_with_facebook_btn"
+        style="@style/card_view_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_google_btn">
             <ImageView
-                android:id="@+id/sign_up_with_facebook_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
+                style="@style/card_view_image"
                 android:src="@drawable/facebook_img"
-                android:contentDescription="@string/img_description"/>
-        </LinearLayout>
-    </LinearLayout>
+                android:contentDescription="@string/img_description"
+                />
+            <TextView
+                style="@style/card_view_text"
+                android:text="@string/sign_up_with_facebook"
+                />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/back_to_login"
+        style="@style/lateral_text"
+        android:text="@string/already_have_account"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_with_facebook_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="0dp"/>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
