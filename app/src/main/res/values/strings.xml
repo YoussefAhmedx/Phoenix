@@ -47,8 +47,13 @@
     <string name="login_with_facebook">Login with Facebook</string>
 
     <!-- Edit Text Hint -->
+    <string name="name_hint">Name</string>
     <string name="email_hint">E-Mail</string>
     <string name="password_hint">Password</string>
+    <string name="phone_hint">Phone</string>
+    <string name="whats_app_number_hint">What\'s App Number</string>
+    <string name="date_hint">Date</string>
+    <string name="select_type_hint">Select Type</string>
 
 
     <!-- Under Line TextView -->

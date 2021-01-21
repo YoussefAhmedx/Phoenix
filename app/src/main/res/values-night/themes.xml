@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-     Base application theme.
-    <style name="Theme.Phoenix" parent="Theme.AppCompat.NoActionBar">
+
+    <style name="Theme.Phoenix" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -91,5 +91,11 @@
         <item name="android:textColor">@color/dark_gray</item>
         <item name="android:background">@color/transparent</item>
         <item name="android:layout_marginStart">30dp</item>
+    </style>
+    <style name="text_input_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:backgroundTint">@color/transparent</item>
     </style>
 </resources>
