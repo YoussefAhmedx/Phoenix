@@ -10,16 +10,14 @@ import android.view.KeyEvent;
 import android.widget.Button;
 
 import com.example.phoenix.CustomPagerAdapter;
+import com.example.phoenix.LoginLayout.LoginActivity;
 import com.example.phoenix.R;
 import com.example.phoenix.SignUpLayout.SignUpActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
-
     //Variables
     Dialog dialog;
     Button sign_up_btn, login_btn;
-
-//    private BroadcastReceiver MyReceiver = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,23 +34,22 @@ public class WelcomeActivity extends AppCompatActivity {
         //Hook
         sign_up_btn = findViewById(R.id.sign_up_btn);
         login_btn = findViewById(R.id.login_btn);
-
         //Open SignUp Activity
         sign_up_btn.setOnClickListener(v -> {
             dialog.show();
             startActivity(new Intent(WelcomeActivity.this, SignUpActivity.class));
             dialog.dismiss();
         });
-        //TODO: Open Login Activity
+        //Open Login Activity
         login_btn.setOnClickListener(v -> {
-
+            dialog.show();
+            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+            dialog.dismiss();
         });
         // instantiating ViewPager
         ViewPager viewPager = findViewById(R.id.viewpager_container);
         //Setting the Adapter
         viewPager.setAdapter(new CustomPagerAdapter(this));
-
-
     }
 
 }

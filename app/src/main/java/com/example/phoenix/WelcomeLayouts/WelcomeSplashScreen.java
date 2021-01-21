@@ -38,6 +38,9 @@ public class WelcomeSplashScreen extends AppCompatActivity {
         welcome_logo.setAnimation(animation_opacity);
         new Handler().postDelayed(() ->{
             welcome_progress_bar.setVisibility(View.VISIBLE);
+            //TODO: CHECK IF USER LOGIN BEFORE AND GO TO MAIN ACTIVITY
+
+            //TODO: IF NOT DO CODE BELOW
             startActivity(new Intent(this, WelcomeActivity.class));
             finish();
         },SPLASH_SCREEN);

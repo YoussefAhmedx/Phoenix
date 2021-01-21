@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.phoenix">
+
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/phoenix_ico"
@@ -10,6 +12,7 @@
         android:roundIcon="@mipmap/phoenix_ico"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phoenix">
+        <activity android:name=".LoginLayout.LoginActivity"></activity>
         <activity
             android:name=".WelcomeLayouts.WelcomeSplashScreen"
             android:screenOrientation="locked">
@@ -19,12 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".WelcomeLayouts.WelcomeActivity"/>
+        <activity android:name=".WelcomeLayouts.WelcomeActivity" />
         <activity
             android:name=".SignUpLayout.SignUpActivity"
-            android:screenOrientation="locked" /> <!-- Welcome Splash Screen -->
-
+            android:screenOrientation="locked" />
     </application>
 
 </manifest>
