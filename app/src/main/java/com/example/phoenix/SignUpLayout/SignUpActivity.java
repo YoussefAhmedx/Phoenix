@@ -2,7 +2,6 @@ package com.example.phoenix.SignUpLayout;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -18,7 +17,7 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         //Hook
-        sign_up_main_text = findViewById(R.id.sign_up_main_text);
+        sign_up_main_text = findViewById(R.id.login_main_text);
         //SignUpFragment Open
         sign_up_main_text.setText(R.string.sign_up_fragment);
         getSupportFragmentManager().beginTransaction()

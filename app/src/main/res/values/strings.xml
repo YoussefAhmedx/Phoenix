@@ -56,7 +56,7 @@
 
     <!-- Hints Text -->
     <string name="sign_up_text">Sign Up</string>
-    <string name="login_text">Login</string>
+    <string name="login_text"><b>Login</b></string>
     <string name="you_are_text">You are ....</string>
     <string name="Licence">By using our services you are agreeing to our <b>terms</b>  and <b>Privacy</b> </string>
     <string name="Licence_2"><b>Statement</b></string>

@@ -1,21 +1,15 @@
 package com.example.phoenix.SignUpLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 
 import com.example.phoenix.R;
-import com.example.phoenix.WelcomeLayouts.WelcomeActivity;
 
 public class SignUpFragment extends Fragment {
 
@@ -32,9 +26,9 @@ public class SignUpFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView =  inflater.inflate(R.layout.fragment_sign_up, container, false);
         //Hook
-        email_sign_up_btn = rootView.findViewById(R.id.sign_up_with_e_mail_btn);
-        google_sign_up_btn = rootView.findViewById(R.id.sign_up_with_google_btn);
-        facebook_sign_up_btn = rootView.findViewById(R.id.sign_up_with_facebook_btn);
+        email_sign_up_btn = rootView.findViewById(R.id.login_with_e_mail_btn);
+        google_sign_up_btn = rootView.findViewById(R.id.login_with_google_btn);
+        facebook_sign_up_btn = rootView.findViewById(R.id.login_with_facebook_btn);
         //Open SignUp Insert Data Fragment
         previous_fragment = new SignUpFragment();
         email_sign_up_btn.setOnClickListener(v -> {
