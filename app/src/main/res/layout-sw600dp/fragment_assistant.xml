@@ -9,22 +9,22 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/add_assistant_btn"
         style="@style/card_view_btn">
-    <ImageView
-        style="@style/card_view_image"
-        android:layout_height="64dp"
-        android:layout_width="64dp"
-        android:src="@drawable/add_circle"
-        android:contentDescription="@string/img_description"
-        />
-    <TextView
-        style="@style/card_view_text"
-        android:text="@string/add_assistant_btn"
-        android:textColor="@color/Light_Blue"/>
+        <ImageView
+            style="@style/card_view_image"
+            android:layout_height="64dp"
+            android:layout_width="64dp"
+            android:src="@drawable/add_circle"
+            android:contentDescription="@string/img_description"
+            />
+        <TextView
+            style="@style/card_view_text"
+            android:text="@string/add_assistant_btn"
+            android:textColor="@color/Light_Blue"/>
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:elevation="24dp"
         android:layout_margin="20dp"
         app:cardCornerRadius="30dp"
