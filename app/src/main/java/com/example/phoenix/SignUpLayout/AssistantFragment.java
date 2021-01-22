@@ -24,6 +24,9 @@ public class AssistantFragment extends Fragment {
     RecyclerView recyclerView;
     Button  submit_btn;
     CardView add_assistant_btn;
+    Fragment previous_fragment;
+
+
     public AssistantFragment() {
         // Required empty public constructor
     }
@@ -46,6 +49,10 @@ public class AssistantFragment extends Fragment {
 
         add_assistant_btn.setOnClickListener(v -> {
             //TODO: Open AddNewAssistantFragment
+            previous_fragment = new AssistantFragment();
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container_fragment , new AddNewAssistantFragment() , "AddNewAssistantFragment")
+                    .addToBackStack(previous_fragment.getClass().getName()).commit();
         });
 
         //TODO: I use temporary data After Assistant Data insert into database u should show thar data into recyclerView

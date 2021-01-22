@@ -47,6 +47,7 @@
     <!-- Sign Up Fragment Main Text -->
     <string name="sign_up_fragment"><b>Create New Account</b></string>
     <string name="assistant_fragment"><b>Do you have assistant ?</b></string>
+    <string name="add_assistant_fragment"><b>Add Assistant</b></string>
     <!-- Login Fragment Main Text-->
     <string name="login_fragment"><b>Welcome Back</b></string>
 
@@ -87,6 +88,7 @@
     <string name="whats_app_number_hint">What\'s App Number</string>
     <string name="date_hint">Date</string>
     <string name="select_type_hint">Select Type</string>
+    <string name="pin_hint">PIN</string>
 
 
     <!-- Under Line TextView -->
