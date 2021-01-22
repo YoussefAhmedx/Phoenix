@@ -48,6 +48,7 @@
     <string name="sign_up_fragment"><b>Create New Account</b></string>
     <string name="assistant_fragment"><b>Do you have assistant ?</b></string>
     <string name="add_assistant_fragment"><b>Add Assistant</b></string>
+    <string name="set_password_fragment"><b>Set Password</b></string>
     <!-- Login Fragment Main Text-->
     <string name="login_fragment"><b>Welcome Back</b></string>
 
@@ -69,8 +70,6 @@
     <string name="other_login_lateral_text">Login in another way</string>
 
     <!-- Button -->
-    <string name="teacher_type_button">Teacher</string>
-    <string name="student_type_button">Student</string>
     <string name="sign_up_with_e_mail">Sign Up With Email</string>
     <string name="sign_up_with_google">Sign up with google</string>
     <string name="sign_up_with_facebook">Sign up with Facebook</string>
@@ -79,16 +78,21 @@
     <string name="login_with_facebook">Login with Facebook</string>
     <string name="create_account_btn">Create Account</string>
     <string name="add_assistant_btn">Add Assistant</string>
+    <string name="check_email_btn">Check</string>
+    <string name="send_btn">Send</string>
+    <string name="set_new_password">Set Password</string>
 
     <!-- Edit Text Hint -->
     <string name="name_hint">Name</string>
     <string name="email_hint">E-Mail</string>
     <string name="password_hint">Password</string>
+    <string name="verification_password_hint">Verification Password</string>
     <string name="phone_hint">Phone</string>
     <string name="whats_app_number_hint">What\'s App Number</string>
     <string name="date_hint">Date</string>
     <string name="select_type_hint">Select Type</string>
     <string name="pin_hint">PIN</string>
+    <string name="code_hint">Code</string>
 
 
     <!-- Under Line TextView -->

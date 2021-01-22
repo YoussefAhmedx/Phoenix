@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ public class LoginFragment extends Fragment {
     //Variables
     CardView login_with_email_btn, login_with_google_btn , login_with_facebook_btn;
     Fragment previous_fragment;
+    Fragment fragment;
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -44,6 +46,8 @@ public class LoginFragment extends Fragment {
         login_with_facebook_btn.setOnClickListener(v -> {
             //TODO: Login with Facebook
         });
+
+        //TODO: Override  BackButton Event
 
 
 
