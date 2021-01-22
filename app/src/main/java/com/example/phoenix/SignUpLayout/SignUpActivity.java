@@ -12,7 +12,7 @@ import com.example.phoenix.R;
 
 public class SignUpActivity extends AppCompatActivity {
     //Variables
-    TextView sign_up_main_text;
+    public static TextView sign_up_main_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

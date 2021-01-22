@@ -35,6 +35,7 @@ public class SignUpDataFragment extends Fragment {
     TextInputEditText name_edit_text , email_edit_text , password_edit_text , phone_edit_text , whatsAppNumber_edit_text , date_edit_text;
     Button submit_btn;
     final Calendar calendar = Calendar.getInstance();
+    Fragment previous_fragment;
     //Open DatePicker Function
     DatePickerDialog.OnDateSetListener date = (view, year, month, dayOfMonth) -> {
         //Auto-generated method stub
@@ -56,6 +57,8 @@ public class SignUpDataFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_sign_up_data, container, false);
+        //Set Main Text
+        SignUpActivity.sign_up_main_text.setText(R.string.sign_up_fragment);
         //Hook
         name_edit_text = rootView.findViewById(R.id.name_edit_text);
         email_edit_text = rootView.findViewById(R.id.email_edit_text);
@@ -66,6 +69,8 @@ public class SignUpDataFragment extends Fragment {
         select_type_act = rootView.findViewById(R.id.select_type_act);
         date_edit_text = rootView.findViewById(R.id.date_picker);
         submit_btn = rootView.findViewById(R.id.submit_btn);
+
+
 
 
         //Get&Set DatePicker
@@ -84,6 +89,7 @@ public class SignUpDataFragment extends Fragment {
         select_type_act.setThreshold(1);
         submit_btn.setOnClickListener(v -> {
 
+
             //TODO: Check there no empty Text
 
 
@@ -92,12 +98,17 @@ public class SignUpDataFragment extends Fragment {
 
             //TODO:Sign Up as Teacher
             if(select_type_act.getText().toString().equals("Teacher")){
+                select_type_act.setText("");
                 //TODO: Open Assistant Fragment
-                Toast.makeText(getActivity(), "Teacher", Toast.LENGTH_SHORT).show();
+                previous_fragment = new SignUpDataFragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.container_fragment , new AssistantFragment() , "AssistantFragment")
+                        .addToBackStack(previous_fragment.getClass().getName()).commit();
 
             }
             //TODO:Sign Up as Student
             else if (select_type_act.getText().toString().equals("Student")){
+                select_type_act.setText("");
                 //TODO: Create Account
                 Toast.makeText(getActivity(), "Student", Toast.LENGTH_SHORT).show();
 
