@@ -2,6 +2,8 @@ package com.example.phoenix.SignUpLayout;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import android.os.Bundle;
 import android.widget.TextView;
 

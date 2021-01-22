@@ -17,6 +17,7 @@
 
     <!-- Sign Up Fragment Main Text -->
     <string name="sign_up_fragment"><b>Create New Account</b></string>
+    <string name="assistant_fragment">Do you have assistant ?</string>
     <!-- Login Fragment Main Text-->
     <string name="login_fragment"><b>Welcome Back</b></string>
 
@@ -45,6 +46,7 @@
     <string name="login_with_email">Login with email</string>
     <string name="login_with_google">Login with google</string>
     <string name="login_with_facebook">Login with Facebook</string>
+    <string name="create_account_btn">Create Account</string>
 
     <!-- Edit Text Hint -->
     <string name="name_hint">Name</string>
@@ -63,6 +65,9 @@
 
     <!-- Image Content Description -->
     <string name="img_description">Image View</string>
+
+    <!-- Toast Text -->
+    <string name="type_empty">Please Select Type</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
