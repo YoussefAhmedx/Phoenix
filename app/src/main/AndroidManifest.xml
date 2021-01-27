@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/phoenix_ico"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phoenix">
+
         <activity android:name=".LoginLayout.LoginActivity"></activity>
         <activity
             android:name=".WelcomeLayouts.WelcomeSplashScreen"
@@ -25,5 +26,5 @@
             android:screenOrientation="locked"
             android:forceDarkAllowed="false"/>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
