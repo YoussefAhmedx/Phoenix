@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import com.example.phoenix.R;
 import com.example.phoenix.SignUpLayout.AssistantFragment;
 import com.example.phoenix.SignUpLayout.SignUpDataFragment;
+import com.example.phoenix.utils.TeacherData;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -31,6 +32,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.concurrent.Executor;
+
 public class LoginFragment extends Fragment {
     private static final String TAG ="test" ;
     //Variables
@@ -39,6 +42,7 @@ public class LoginFragment extends Fragment {
     GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 1;
     private FirebaseAuth mAuth;
+
 
 
 
@@ -125,7 +129,7 @@ public class LoginFragment extends Fragment {
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -136,7 +140,7 @@ public class LoginFragment extends Fragment {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
-                            Snackbar.make(mBinding.mainLayout, "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(getActivity().findViewById(android.R.id.content), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
                             updateUI(null);
                         }
 
