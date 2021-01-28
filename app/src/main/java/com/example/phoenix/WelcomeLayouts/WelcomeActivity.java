@@ -11,16 +11,22 @@ import android.widget.Button;
 
 import com.example.phoenix.CustomPagerAdapter;
 import com.example.phoenix.LoginLayout.LoginActivity;
+import com.example.phoenix.MainActivity;
 import com.example.phoenix.R;
 import com.example.phoenix.SignUpLayout.SignUpActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class WelcomeActivity extends AppCompatActivity {
     //Variables
     Dialog dialog;
     Button sign_up_btn, login_btn;
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_welcome);
         //Dialog
         dialog = new Dialog(this);
@@ -50,6 +56,16 @@ public class WelcomeActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.viewpager_container);
         //Setting the Adapter
         viewPager.setAdapter(new CustomPagerAdapter(this));
+    }
+    //if user already loged in go home
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null) {
+            startActivity(new Intent(this, MainActivity.class));
+        }
+
     }
 
 }

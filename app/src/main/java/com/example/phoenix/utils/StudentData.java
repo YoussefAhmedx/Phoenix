@@ -8,6 +8,11 @@ public class StudentData {
     private String phone;
     private String whats;
     private Date birthday;
+    private String id;
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void setName(String name) {
         this.name = name;

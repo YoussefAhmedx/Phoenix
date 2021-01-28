@@ -104,7 +104,6 @@ public class SignUpDataFragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container_fragment , new AssistantFragment() , "AssistantFragment")
                         .addToBackStack(previous_fragment.getClass().getName()).commit();
-
             }
             //TODO:Sign Up as Student
             else if (select_type_act.getText().toString().equals("Student")){
