@@ -38,6 +38,7 @@ public class AssistantFragment extends Fragment {
 
         //Set Main Text
         SignUpActivity.sign_up_main_text.setText(R.string.assistant_fragment);
+        SignUpActivity.sign_up_main_text.setTextSize(30);
 
         //Hook
         recyclerView = rootView.findViewById(R.id.assistant_recycler_view);
@@ -48,7 +49,7 @@ public class AssistantFragment extends Fragment {
 
 
         add_assistant_btn.setOnClickListener(v -> {
-            //TODO: Open AddNewAssistantFragment
+            //Open AddNewAssistantFragment
             previous_fragment = new AssistantFragment();
             getActivity().getSupportFragmentManager().beginTransaction()
                     .replace(R.id.container_fragment , new AddNewAssistantFragment() , "AddNewAssistantFragment")

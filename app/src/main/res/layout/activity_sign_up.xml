@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="4">
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/login_main_text"
-        style="@style/sign_up_activity_text" />
-    <FrameLayout
-        app:layout_constraintTop_toBottomOf="@id/login_main_text"
+        style="@style/sign_up_activity_text"
+        android:layout_weight=".5"/>
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:id="@+id/container_fragment"
         android:layout_marginTop="50dp"
-        app:layout_constraintBottom_toTopOf="@id/licence_text"/>
+        android:layout_weight="3"/>
     <TextView
         android:id="@+id/licence_text"
         style="@style/sign_up_activity_text"
         android:text="@string/Licence"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="40dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_weight=".2"
         />
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/licence_text"
+        android:layout_height="0dp"
         android:text="@string/Licence_2"
         android:textColor="@color/white"
         android:textSize="12sp"
+        android:layout_weight=".2"
+        android:layout_gravity="center"
         />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
