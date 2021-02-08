@@ -56,6 +56,7 @@ public class SignUpFragment extends Fragment {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(getActivity(), gso);
+        
 
 
         // Inflate the layout for this fragment
@@ -74,7 +75,6 @@ public class SignUpFragment extends Fragment {
         //TODO: Get Google Data Then Open SignUp Insert Data Fragment
         google_sign_up_btn.setOnClickListener(v -> {
             signIn();
-
         });
         //TODO: Get Facebook Data Then Open SignUp Insert Data Fragment
         facebook_sign_up_btn.setOnClickListener(v -> {
@@ -98,6 +98,7 @@ public class SignUpFragment extends Fragment {
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+
     }
 
     @Override
@@ -124,6 +125,8 @@ public class SignUpFragment extends Fragment {
             teacherData.setImageUrl(String.valueOf(photoUrl));
             teacherData.setId(mAuth.getCurrentUser().getUid());
             databaseReference.child("teachers").child(teacherData.getId()).setValue(teacherData);
+            Log.e(TAG, "uploadData: "+teacherData.getEmail()+teacherData
+                    .getFirstName()+teacherData.getImageUrl() );
         }
 
     }

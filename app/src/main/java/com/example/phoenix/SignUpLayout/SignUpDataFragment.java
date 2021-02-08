@@ -99,6 +99,7 @@ public class SignUpDataFragment extends Fragment {
             //TODO:Sign Up as Teacher
             if(select_type_act.getText().toString().equals("Teacher")){
                 select_type_act.setText("");
+                
                 //TODO: Open Assistant Fragment
                 previous_fragment = new SignUpDataFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()

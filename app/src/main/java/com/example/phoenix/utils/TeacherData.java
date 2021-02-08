@@ -9,6 +9,35 @@ public class TeacherData {
     private String phone;
     private String whats;
     private Date birthday;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getWhats() {
+        return whats;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
     private String id;
     private String imageUrl;
 
