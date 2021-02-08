@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "928245815390",
+    "firebase_url": "https://phoenix-f00c9-default-rtdb.firebaseio.com",
+    "project_id": "phoenix-f00c9",
+    "storage_bucket": "phoenix-f00c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928245815390:android:e74cf4ed2e8ba9d4643ccf",
+        "android_client_info": {
+          "package_name": "com.example.phoenix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928245815390-umhkvu5cn0a9l2m2fquhem0dktsjilqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.phoenix",
+            "certificate_hash": "160956162558d740883e3082a18bd4c872c97e02"
+          }
+        },
+        {
+          "client_id": "928245815390-hgunuv7tf755ga15v47qh1225gnc59oj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDraPrPL76xYn7xmq50zpmGY6ilHiF_WmM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928245815390-hgunuv7tf755ga15v47qh1225gnc59oj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
