@@ -17,6 +17,10 @@ import android.widget.Toast;
 import com.example.phoenix.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,6 +31,12 @@ public class SignUpDataFragment extends Fragment {
     public SignUpDataFragment() {
         // Required empty public constructor
     }
+    //firebase
+    StorageReference storageReference;
+    DatabaseReference databaseReference;
+
+
+
     //Variables
     TextInputLayout select_type_edit_text;
     AutoCompleteTextView select_type_act;
@@ -55,6 +65,10 @@ public class SignUpDataFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //firebase
+        storageReference= FirebaseStorage.getInstance().getReference();
+        databaseReference= FirebaseDatabase.getInstance().getReference();
+
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_sign_up_data, container, false);
         //Set Main Text
@@ -93,6 +107,7 @@ public class SignUpDataFragment extends Fragment {
             //TODO: Check there no empty Text
 
 
+
             //TODO: Save User Data into class until he insert other data
 
 
@@ -120,4 +135,29 @@ public class SignUpDataFragment extends Fragment {
 
         return rootView;
     }
+    protected void upLoadUserDate(){
+
+        String  student_firstName= name_edit_text.getText().toString().trim();
+        String student_e_Mail= email_edit_text.getText().toString().trim();
+        String student_Password= password_edit_text.getText().toString().trim();
+        String student_phone= phone_edit_text.getText().toString().trim();
+        String student_whats_app_num= whatsAppNumber_edit_text.getText().toString().trim();
+        String student_date=date_edit_text.getText().toString().trim();
+       // String[] size_values = getResources().getStringArray(R.array.grades);
+
+        if (student_firstName.isEmpty()||student_e_Mail.isEmpty()||student_Password
+                .isEmpty()
+                ||student_phone.isEmpty()||student_whats_app_num.isEmpty()
+                ||student_date.isEmpty())
+        { Toast.makeText(getActivity(),"check your date",Toast.LENGTH_LONG).show(); }
+        else {
+            final String id=  databaseReference.child("User").push().getKey();
+            databaseReference.child("users").child(id).setValue(new User
+                    ( id, student_firstName,
+                    student_e_Mail,  student_Password,
+                            student_phone,  student_whats_app_num,
+                    student_date));
+
+
+        }}
 }
