@@ -1,60 +1,82 @@
 package com.example.phoenix.SignUpLayout;
 
 public class User {
-    String  student_firstName;
-    String student_lastName;
-    String student_e_Mail;
-    String student_password;
-    String ver_password;
-    String student_phone;
-    String student_what_App_number;
-    String student_date;
+    String id,select_type, firstName, e_Mail,  Password, phone,  whats_app_num, date;
 
-    public User(String student_firstName, String student_lastName, String student_e_Mail,
-                String student_password, String ver_password,
-                String student_phone, String student_what_App_number) {
-        this.student_firstName = student_firstName;
-        this.student_lastName = student_lastName;
-        this.student_e_Mail = student_e_Mail;
-        this.student_password = student_password;
-        this.ver_password = ver_password;
-        this.student_phone = student_phone;
-        this.student_what_App_number = student_what_App_number;
-        this.student_date = student_date;
+    public User(String id, String select_type, String firstName, String e_Mail, String password, String phone, String whats_app_num, String date) {
+        this.id = id;
+        this.select_type = select_type;
+        this.firstName = firstName;
+        this.e_Mail = e_Mail;
+        this.Password = password;
+        this.phone = phone;
+        this.whats_app_num = whats_app_num;
+        this.date = date;
     }
 
-    public String getStudent_firstName() {
-        return student_firstName;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getStudent_lastName() {
-        return student_lastName;
+    public void setSelect_type(String select_type) {
+        this.select_type = select_type;
     }
 
-    public String getStudent_e_Mail() {
-        return student_e_Mail;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getStudent_password() {
-        return student_password;
+    public void setE_Mail(String e_Mail) {
+        this.e_Mail = e_Mail;
     }
 
-    public String getVer_password() {
-        return ver_password;
+    public void setPassword(String password) {
+        Password = password;
     }
 
-    public String getStudent_phone() {
-        return student_phone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getStudent_what_App_number() {
-        return student_what_App_number;
+    public void setWhats_app_num(String whats_app_num) {
+        this.whats_app_num = whats_app_num;
     }
 
-    public String getStudent_date() {
-        return student_date;
+    public void setDate(String date) {
+        this.date = date;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public String getSelect_type() {
+        return select_type;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getE_Mail() {
+        return e_Mail;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getWhats_app_num() {
+        return whats_app_num;
+    }
+
+    public String getDate() {
+        return date;
+    }
 
 
 }

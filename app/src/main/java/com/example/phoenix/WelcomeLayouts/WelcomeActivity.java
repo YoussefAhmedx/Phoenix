@@ -1,6 +1,8 @@
 package com.example.phoenix.WelcomeLayouts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.Dialog;
@@ -14,6 +16,7 @@ import com.example.phoenix.LoginLayout.LoginActivity;
 import com.example.phoenix.MainActivity;
 import com.example.phoenix.R;
 import com.example.phoenix.SignUpLayout.SignUpActivity;
+import com.example.phoenix.SignUpLayout.SignUpDataFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -28,6 +31,9 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_welcome);
+
+        //  getSupportFragmentManager().beginTransaction().replace(R.id.container,new SignUpDataFragment()).commit();
+
         //Dialog
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.progress_bar);
