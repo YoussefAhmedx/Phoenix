@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/phoenix_ico"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phoenix">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginLayout.LoginActivity" />
         <activity
             android:name=".WelcomeLayouts.WelcomeSplashScreen"
