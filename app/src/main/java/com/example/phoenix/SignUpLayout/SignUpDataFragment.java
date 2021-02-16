@@ -1,5 +1,6 @@
 package com.example.phoenix.SignUpLayout;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Build;
@@ -21,8 +22,13 @@ import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.example.phoenix.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -201,17 +207,16 @@ public class SignUpDataFragment extends Fragment {
                 args.putString("Password", Password);
                 args.putString("whats_app_num", whats_app_num);
                 args.putString("phone", phone);
-                args.putString("select_type", select_type);
                 fragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.container_fragment, fragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.container_fragment, fragment).commit();}
 
-            }
+
                 //TODO: Open Assistant Fragment
 //                previous_fragment = new SignUpDataFragment();
 //                getActivity().getSupportFragmentManager().beginTransaction()
 //                        .replace(R.id.container_fragment , new AssistantFragment() , "AssistantFragment")
 //                        .addToBackStack(previous_fragment.getClass().getName()).commit();
-            }
+
             //TODO:Sign Up as Student
              if (select_type_act.getText().toString().equals("Student")){
                 select_type_act.setText("");
@@ -219,8 +224,9 @@ public class SignUpDataFragment extends Fragment {
                 signUp(select_type, firstName, e_Mail,  Password, phone,  whats_app_num, date);
                 Toast.makeText(getActivity(), "Student", Toast.LENGTH_SHORT).show();
 
-            }
-        }
+
+        }}}
+
 
 
     protected void signUp(String select_type,String firstName, String e_Mail, String Password, String phone,
@@ -237,7 +243,18 @@ public class SignUpDataFragment extends Fragment {
     protected void createUser(String email,String password) {
         FirebaseAuth firebaseAuth;
         firebaseAuth = FirebaseAuth.getInstance();
-        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(authResult -> Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT)
-                .show()).addOnFailureListener(e -> Toast.makeText(getActivity(), e.getLocalizedMessage(), Toast.LENGTH_SHORT).show());
+        firebaseAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @SuppressLint("ShowToast")
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                Toast.makeText(getActivity(), "LOGIN Success", Toast.LENGTH_SHORT);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @SuppressLint("ShowToast")
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getActivity(), "Failure", Toast.LENGTH_SHORT);
+            }
+        });
 
 }}
