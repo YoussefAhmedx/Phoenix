@@ -42,7 +42,7 @@ public class ForgetPasswordCodeFragment extends Fragment {
     TextInputEditText phone_edit_text , code_edit_text;
     Button send_btn , check_btn;
     Fragment previous_fragment;
-String codeBySystem;
+    String codeBySystem;
     public ForgetPasswordCodeFragment() {
         // Required empty public constructor
     }
