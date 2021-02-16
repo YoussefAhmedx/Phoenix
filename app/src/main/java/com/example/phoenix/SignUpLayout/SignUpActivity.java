@@ -20,7 +20,9 @@ public class SignUpActivity extends AppCompatActivity {
         sign_up_main_text = findViewById(R.id.login_main_text);
         //SignUpFragment Open
         sign_up_main_text.setText(R.string.sign_up_fragment);
+
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_fragment, new SignUpFragment() , "SignUpFragment").commit();
+
     }
 }

@@ -24,16 +24,16 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:elevation="24dp"
+        android:layout_height="246dp"
         android:layout_margin="20dp"
-        app:cardCornerRadius="30dp"
         android:backgroundTint="@color/white_opacity"
-        >
+        android:elevation="24dp"
+        app:cardCornerRadius="30dp">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/assistant_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="93dp"
             android:layout_margin="20dp" />
     </androidx.cardview.widget.CardView>
     <Button

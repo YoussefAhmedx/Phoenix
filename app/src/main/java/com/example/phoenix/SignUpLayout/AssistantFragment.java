@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,9 +12,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.phoenix.R;
 import com.example.phoenix.SignUpLayout.RecyclerView.RecyclerViewAdapter;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.protobuf.StringValue;
+import com.google.protobuf.StringValueOrBuilder;
 
 
 public class AssistantFragment extends Fragment {
@@ -25,28 +31,43 @@ public class AssistantFragment extends Fragment {
     Button  submit_btn;
     CardView add_assistant_btn;
     Fragment previous_fragment;
-
-
     public AssistantFragment() {
         // Required empty public constructor
     }
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    // TODO: Rename and change types of parameters
+    private String mParam1;
+    private String mParam2;
+
+
+
+
+    public static AssistantFragment newInstance(String param1, String param2) {
+        AssistantFragment fragment = new AssistantFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+    DatabaseReference databaseReference;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View rootView = inflater.inflate(R.layout.fragment_assistant, container, false);
+        databaseReference= FirebaseDatabase.getInstance().getReference();
 
         //Set Main Text
-        SignUpActivity.sign_up_main_text.setText(R.string.assistant_fragment);
-
+    //    SignUpActivity.sign_up_main_text.setText(R.string.assistant_fragment);
         //Hook
         recyclerView = rootView.findViewById(R.id.assistant_recycler_view);
         assistants = getResources().getStringArray(R.array.Assistant_Name);
         teachers = getResources().getStringArray(R.array.Teacher_Name);
         add_assistant_btn = rootView.findViewById(R.id.add_assistant_btn);
         submit_btn = rootView.findViewById(R.id.submit_btn);
-
-
         add_assistant_btn.setOnClickListener(v -> {
             //TODO: Open AddNewAssistantFragment
             previous_fragment = new AssistantFragment();
@@ -59,13 +80,43 @@ public class AssistantFragment extends Fragment {
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext() ,assistants,teachers,image);
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        submit_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            getTeacherDate();
 
-
-        submit_btn.setOnClickListener(v -> {
-            //TODO: Upload All Data of User from SignUpDataFragment and AssistantFragment Into DataBase
+            }
         });
 
         return rootView;
 
     }
+private void getTeacherDate(){
+
+    Bundle args = getArguments();
+    assert args != null;
+
+    String firstName =args.getString("firstName");
+    String select_type =args.getString("select_type");
+    String e_Mail =args.getString("e_Mail");
+    String Password =args.getString("Password");
+    String phone =args.getString("phone");
+    String whats_app_num =args.getString("whats_app_num");
+    String date =args.getString("date");
+    Toast.makeText(getActivity(), select_type, Toast.LENGTH_SHORT).show();
+
+}
+
+    private void uploadAssistantDate(String number){
+
+        Bundle args = getArguments();
+        assert args != null;
+        String assistantName =args.getString("assistantName");
+        String assistantPhone =args.getString("assistantPhone");
+        String assistantWhatsAppNumber =args.getString("assistantWhatsAppNumber");
+        String assistantPIN =args.getString("assistantPIN");
+        databaseReference.child("Users").child("Teachers").child(number).child("assistant").setValue(new assistant_model(assistantName
+                , assistantWhatsAppNumber, assistantPIN, assistantPhone ));
+
+}
 }
