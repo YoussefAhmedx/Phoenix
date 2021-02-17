@@ -24,6 +24,7 @@ import com.google.protobuf.StringValueOrBuilder;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 
 
 public class AssistantFragment extends Fragment {
@@ -89,7 +90,14 @@ public class AssistantFragment extends Fragment {
         String whats_app_num =args.getString("whats_app_num");
         String date =args.getString("date");
         String select_type ="Teacher";
+        if (args != null && args.containsKey("list")) {
 
+
+        Serializable list=args.getSerializable("list");
+
+        args.putSerializable("list", list);
+
+    }
         //Set Main Text
     //    SignUpActivity.sign_up_main_text.setText(R.string.assistant_fragment);
         //Hook
@@ -143,12 +151,10 @@ public class AssistantFragment extends Fragment {
     private void uploadAssistantDate(String number){
 
         Bundle args = getArguments();
-        assert args != null;
 
         Serializable list=args.getSerializable("list");
-
+        assert args != null;
         databaseReference2= FirebaseDatabase.getInstance().getReference("Teacher");
-
         databaseReference2.child(number).child("assistant").setValue(list );
 
     }

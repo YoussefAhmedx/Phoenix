@@ -250,14 +250,15 @@ public class SignUpDataFragment extends Fragment {
             @SuppressLint("ShowToast")
             @Override
             public void onSuccess(AuthResult authResult) {
-               Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
-              //  firebaseAuth.signOut();
+
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @SuppressLint("ShowToast")
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getActivity(), "Failure", Toast.LENGTH_SHORT).show();
+
+
             }
         });
 
