@@ -160,45 +160,46 @@ public class SignUpDataFragment extends Fragment {
                 || date.isEmpty()
                 || select_type.isEmpty()) {
             Toast.makeText(getActivity(), "check your date", Toast.LENGTH_LONG).show();
+
         }
         String checkEmail = "[a-zA-Z0-9._-]+@[a-z]+.+[a-z]+";
         String checkspaces = "[+-](201)[0-9]{9}";
         String checkPassword = "^" +
                 "(?=.*[0-9]{8})" +         //at least 1 digi
                 "(?=.*[a-z])" +         //at least 1 lower case letter
-                //  "(?=.*[A-Z])" +         //at least 1 upper case letter
-                //      "(?=.*[a-zA-Z])" +      //any letter
-                //"(?=.*[@#$%^&+=])" +    //at least 1 special character
-                //"(?=S+$)" +           //no white spaces
-                // ".{4,}" +               //at least 4 characters
-                "$";
+        //  "(?=.*[A-Z])" +         //at least 1 upper case letter
+        //      "(?=.*[a-zA-Z])" +      //any letter
+        //"(?=.*[@#$%^&+=])" +    //at least 1 special character
+        //"(?=S+$)" +           //no white spaces
+        // ".{4,}" +               //at least 4 characters
+         "$";
         if (!phone.matches(checkspaces)) {
             phone_edit_text.setError("No White spaces are allowed!");
 
         }
-        if (!whats_app_num.matches(checkspaces)) {
+        else if (!whats_app_num.matches(checkspaces)) {
             whatsAppNumber_edit_text.setError("No White spaces are allowed!");
 
         }
-        if (Password.matches(checkPassword)) {
+        else if (Password.matches(checkPassword)) {
             password_edit_text.setError("Password should contain at least 1 upper case letter and 1 number!");
             //     Toast.makeText(this, "You are not eligible to apply", Toast.LENGTH_SHORT).show();
         }
 //        int currentYear = android.icu.util.Calendar.getInstance().get(android.icu.util.Calendar.YEAR);
 //        int userAge = Integer.parseInt(date);
 //        int isAgeValid = currentYear - userAge;
-        if (!e_Mail.matches(checkEmail)) {
+        else if (!e_Mail.matches(checkEmail)) {
             email_edit_text.setError("Invalid Email!");
         }
 
 
-        else {
+      else {
             password_edit_text.setError(null);
             phone_edit_text.setError(null);
             email_edit_text.setError(null);
             whatsAppNumber_edit_text.setError(null);
 
-            if(select_type_act.getText().toString().equals("Teacher")) {
+            if (select_type_act.getText().toString().equals("Teacher")) {
                 AssistantFragment fragment = new AssistantFragment();
                 Bundle args = new Bundle();
                 args.putString("firstName", firstName);
@@ -208,24 +209,27 @@ public class SignUpDataFragment extends Fragment {
                 args.putString("whats_app_num", whats_app_num);
                 args.putString("phone", phone);
                 fragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.container_fragment, fragment).commit();}
+                previous_fragment = new SignUpDataFragment();
+                getFragmentManager().beginTransaction().replace(R.id.container_fragment, fragment).addToBackStack(previous_fragment.getClass().getName()).commit();
+            }
 
 
-                //TODO: Open Assistant Fragment
+            //TODO: Open Assistant Fragment
 //                previous_fragment = new SignUpDataFragment();
 //                getActivity().getSupportFragmentManager().beginTransaction()
 //                        .replace(R.id.container_fragment , new AssistantFragment() , "AssistantFragment")
 //                        .addToBackStack(previous_fragment.getClass().getName()).commit();
 
             //TODO:Sign Up as Student
-             if (select_type_act.getText().toString().equals("Student")){
-                select_type_act.setText("");
-                //Create Account
-                signUp(select_type, firstName, e_Mail,  Password, phone,  whats_app_num, date);
-                Toast.makeText(getActivity(), "Student", Toast.LENGTH_SHORT).show();
+             if (select_type_act.getText().toString().equals("Student")) {
+                 select_type_act.setText("");
+                 //Create Account
+                 signUp(select_type, firstName, e_Mail, Password, phone, whats_app_num, date);
+                 Toast.makeText(getActivity(), "Student", Toast.LENGTH_SHORT).show();
+             }
 
 
-        }}}
+        }}
 
 
 
@@ -241,19 +245,19 @@ public class SignUpDataFragment extends Fragment {
     }
 
     protected void createUser(String email,String password) {
-        FirebaseAuth firebaseAuth;
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @SuppressLint("ShowToast")
             @Override
             public void onSuccess(AuthResult authResult) {
-                Toast.makeText(getActivity(), "LOGIN Success", Toast.LENGTH_SHORT);
+               Toast.makeText(getActivity(), "Success", Toast.LENGTH_SHORT).show();
+              //  firebaseAuth.signOut();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @SuppressLint("ShowToast")
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getActivity(), "Failure", Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity(), "Failure", Toast.LENGTH_SHORT).show();
             }
         });
 

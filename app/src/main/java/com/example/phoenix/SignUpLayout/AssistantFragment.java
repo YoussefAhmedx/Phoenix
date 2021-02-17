@@ -38,14 +38,7 @@ public class AssistantFragment extends Fragment {
     public AssistantFragment() {
         // Required empty public constructor
     }
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment BlankFragment3.
-     */
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -117,7 +110,9 @@ public class AssistantFragment extends Fragment {
             args.putString("phone", phone);
             AddNewAssistantFragment addNewAssistantFragment = new AddNewAssistantFragment();
             addNewAssistantFragment.setArguments(args);
-            getFragmentManager().beginTransaction().replace(R.id.container_fragment,addNewAssistantFragment ).commit();
+            previous_fragment = new AssistantFragment();
+            getFragmentManager().beginTransaction().replace(R.id.container_fragment,addNewAssistantFragment )
+                    .addToBackStack(previous_fragment.getClass().getName()).commit();
         });
 
         //TODO: I use temporary data After Assistant Data insert into database u should show thar data into recyclerView
@@ -133,7 +128,10 @@ public class AssistantFragment extends Fragment {
                 signUpDataFragment.signUp(
                         select_type, firstName,  e_Mail,  Password,  phone,
                         whats_app_num, date);
-                uploadAssistantDate(phone);
+                Bundle args = getArguments();
+                if (args != null && args.containsKey("list")) {
+                    uploadAssistantDate(phone);
+                }
             }
         });
 
