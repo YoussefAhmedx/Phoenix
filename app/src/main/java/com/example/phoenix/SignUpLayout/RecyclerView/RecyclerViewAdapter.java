@@ -11,10 +11,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.phoenix.R;
+import com.example.phoenix.SignUpLayout.assistant_model;
+
+import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     String Assistants[] , Teacher [];
     int image;
+
+    public void setList(ArrayList<assistant_model> list) {
+        this.list = list;
+    }
+
+    ArrayList<assistant_model> list;
     Context context;
     public RecyclerViewAdapter(Context context , String Assistant[] , String Teacher[] , int image){
         this.Assistants = Assistant;

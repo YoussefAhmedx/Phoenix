@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -58,13 +59,22 @@ public class AddNewAssistantFragment extends Fragment {
 
     DatabaseReference databaseReference;
     FirebaseAuth auth;
+
+
     ArrayList<assistant_model> list=new ArrayList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.fragment_add_new_assistant, container, false);
+        Bundle args = getArguments();
+
+        if (args != null && args.containsKey("list")) {
+            list = (ArrayList<assistant_model>) args.getSerializable("list");
+
+        }
         auth=FirebaseAuth.getInstance();
         databaseReference= FirebaseDatabase.getInstance().getReference();
         SignUpActivity.sign_up_main_text.setText(R.string.add_assistant_fragment);
@@ -113,6 +123,7 @@ public class AddNewAssistantFragment extends Fragment {
             phone_edit_text.setError(null);
             whatsAppNumber_edit_text.setError(null);
             list.add(new assistant_model(assistantName,assistantPhone,assistantWhatsAppNumber,assistantPIN));
+
             Bundle args = getArguments();
             String firstName =args.getString("firstName");
             String e_Mail =args.getString("e_Mail");
